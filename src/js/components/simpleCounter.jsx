@@ -20,12 +20,21 @@ const SimpleCounter = () => {
         return () => clearInterval(timer)
     }, []);
 
+    //cada variable muestra seconds en un respectivo orden.
+    const miles = Math.floor(seconds / 1000) % 10;
+    const centenas = Math.floor(seconds / 100) % 10;
+    const decenas = Math.floor(seconds / 10) % 10;
+    const unidades = seconds % 10;
+
 return (
     <div className="bigCounter">
         <div className="calendar">
             <FontAwesomeIcon icon={faClock}/>
         </div>
-        <div className="four">{seconds}</div>
+        <div>{miles}</div>
+        <div>{centenas}</div>
+        <div>{decenas}</div>
+        <div>{unidades}</div>
         
     </div>
 );};
