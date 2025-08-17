@@ -9,10 +9,10 @@ import "bootstrap"
 import '../styles/index.css'
 
 // components
-import Home from './components/Home';
+import SimpleCounter from './components/simpleCounter';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home/>
+    <SimpleCounter />
   </React.StrictMode>,
 )
